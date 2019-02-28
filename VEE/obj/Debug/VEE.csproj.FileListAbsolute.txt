@@ -171,8 +171,8 @@ C:\Users\angel.canales\Documents\repo\VEE\VEE\bin\es\Microsoft.Owin.Security.Fac
 C:\Users\angel.canales\Documents\repo\VEE\VEE\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\angel.canales\Documents\repo\VEE\VEE\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\angel.canales\Documents\repo\VEE\VEE\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\angel.canales\Documents\repo\VEE\VEE\obj\Debug\VEE.csprojAssemblyReference.cache
 C:\Users\angel.canales\Documents\repo\VEE\VEE\obj\Debug\VEE.csproj.CoreCompileInputs.cache
 C:\Users\angel.canales\Documents\repo\VEE\VEE\obj\Debug\VEE.csproj.CopyComplete
 C:\Users\angel.canales\Documents\repo\VEE\VEE\obj\Debug\VEE.dll
 C:\Users\angel.canales\Documents\repo\VEE\VEE\obj\Debug\VEE.pdb
+C:\Users\angel.canales\Documents\repo\VEE\VEE\obj\Debug\VEE.csprojAssemblyReference.cache

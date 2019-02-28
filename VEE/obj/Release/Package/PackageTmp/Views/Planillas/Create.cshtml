@@ -1,0 +1,112 @@
+﻿@model VEE.Models.BasedeDatos.Planilla
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+
+
+    @using (Html.BeginForm("Create", "Planillas", FormMethod.Post, new { role = "form", enctype = "multipart/form-data" }))
+    {
+        
+            @Html.AntiForgeryToken()
+
+
+
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Crear Planilla Estudiantil</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+                                        <div class="form-horizontal">
+                                            <h3></h3>
+                                            <hr />
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.Fecha, "{ 0:d MMM yyyy}", new { htmlAttributes = new { @class = "form-control datetimepicker" } })
+                                                    @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.Foto, htmlAttributes: new { @class = "control-label col-md-2" })
+                                                @Html.ValidationMessageFor(model => model.Foto, "", new { @class = "text-danger" })
+
+                                                <div class="col-md-10">
+                                                    <img id="output" style="max-width:100px; max-height:100px;" />
+                                                    <input type="file" name="Foto" accept="image/*" onchange="loadFile(event)" />
+                                                    @*<input type="file" name="Image" data-val="true" id="Image" accept="image/*" onchange="loadFile(event)" />*@
+
+                                                    <script>
+                                                        var loadFile = function (event) {
+                                                            var output = document.getElementById('output');
+                                                            output.src = URL.createObjectURL(event.target.files[0]);
+                                                        };
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div>
+                                        @Html.ActionLink("Volver a la Lista", "Index")
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Crear Planilla" class="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.card -->
+
+                            <div class="card-body">
+
+                                <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!--/.col (left) -->
+                    <!--/.col (right) -->
+                </div>
+
+            </section>
+        }
+
+
+
+    </body>
+</html>

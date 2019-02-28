@@ -1,0 +1,44 @@
+﻿@model VEE.Models.BasedeDatos.Planilla
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Realizarvoto</title>
+</head>
+<body>
+
+
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="m-0">Voto Realizado</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">El voto fue realizado con Éxito! </h6>
+
+                                <p class="card-text">Se agrego un voto mas al estudiante   @Html.DisplayFor(model => model.Nombre).</p>
+                                <a href="@Url.Action("Index","Sufragios")" class="btn btn-primary">Finalizar!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+</body>
+</html>
+
+
