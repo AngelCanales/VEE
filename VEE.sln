@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VEE", "VEE\VEE.csproj", "{88235ECC-016E-4178-B3B2-D3AC34C38E91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{AC92A9AE-C9F5-476B-90D4-BE7FDE8C03EB}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureVMPublishModule.psm1 = PublishScripts\AzureVMPublishModule.psm1
+		PublishScripts\Publish-WebApplicationVM.ps1 = PublishScripts\Publish-WebApplicationVM.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{D999ACAD-9A77-4262-A776-9B514E7A11DB}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\VEE-VM-dev.json = PublishScripts\Configurations\VEE-VM-dev.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C6E96F8-6544-4884-B527-50AC49E2CB40}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{25E11128-030F-4805-93AD-F548B37D0774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88235ECC-016E-4178-B3B2-D3AC34C38E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88235ECC-016E-4178-B3B2-D3AC34C38E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88235ECC-016E-4178-B3B2-D3AC34C38E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88235ECC-016E-4178-B3B2-D3AC34C38E91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D999ACAD-9A77-4262-A776-9B514E7A11DB} = {AC92A9AE-C9F5-476B-90D4-BE7FDE8C03EB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88235ECC-016E-4178-B3B2-D3AC34C38E91}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VEE</RootNamespace>
+    <AssemblyName>VEE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlumnoesController.cs" />
+    <Compile Include="Controllers\CargoPlanillasController.cs" />
+    <Compile Include="Controllers\DetallePlanillasController.cs" />
+    <Compile Include="Controllers\EscuelasController.cs" />
+    <Compile Include="Controllers\GradoesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImagenesController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlanillasController.cs" />
+    <Compile Include="Controllers\ResultadoesController.cs" />
+    <Compile Include="Controllers\SufragiosController.cs" />
+    <Compile Include="DataContext\DataContext.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AlumnoViewModels.cs" />
+    <Compile Include="Models\BasedeDatos\Alumno.cs" />
+    <Compile Include="Models\BasedeDatos\CargoPlanilla.cs" />
+    <Compile Include="Models\BasedeDatos\DetallePlanilla.cs" />
+    <Compile Include="Models\BasedeDatos\Escuela.cs" />
+    <Compile Include="Models\BasedeDatos\Grado.cs" />
+    <Compile Include="Models\BasedeDatos\Planilla.cs" />
+    <Compile Include="Models\BasedeDatos\Planillaviewmodel.cs" />
+    <Compile Include="Models\BasedeDatos\Resultado.cs" />
+    <Compile Include="Models\BasedeDatos\Sufragio.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Resultadomodel.cs" />
+    <Compile Include="Models\ResultadoViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Util\HttpPostedFileBaseExtensions.cs" />
+    <Compile Include="Util\ImageUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\AdminLTE.css" />
+    <Content Include="Content\css\AdminLTE.min.css" />
+    <Content Include="Content\css\alt\AdminLTE-bootstrap-social.css" />
+    <Content Include="Content\css\alt\AdminLTE-bootstrap-social.min.css" />
+    <Content Include="Content\css\alt\AdminLTE-fullcalendar.css" />
+    <Content Include="Content\css\alt\AdminLTE-fullcalendar.min.css" />
+    <Content Include="Content\css\alt\AdminLTE-select2.css" />
+    <Content Include="Content\css\alt\AdminLTE-select2.min.css" />
+    <Content Include="Content\css\alt\AdminLTE-without-plugins.css" />
+    <Content Include="Content\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="Content\css\skins\skin-black-light.css" />
+    <Content Include="Content\css\skins\skin-black-light.min.css" />
+    <Content Include="Content\css\skins\skin-black.css" />
+    <Content Include="Content\css\skins\skin-black.min.css" />
+    <Content Include="Content\css\skins\skin-blue-light.css" />
+    <Content Include="Content\css\skins\skin-blue-light.min.css" />
+    <Content Include="Content\css\skins\skin-blue.css" />
+    <Content Include="Content\css\skins\skin-blue.min.css" />
+    <Content Include="Content\css\skins\skin-green-light.css" />
+    <Content Include="Content\css\skins\skin-green-light.min.css" />
+    <Content Include="Content\css\skins\skin-green.css" />
+    <Content Include="Content\css\skins\skin-green.min.css" />
+    <Content Include="Content\css\skins\skin-purple-light.css" />
+    <Content Include="Content\css\skins\skin-purple-light.min.css" />
+    <Content Include="Content\css\skins\skin-purple.css" />
+    <Content Include="Content\css\skins\skin-purple.min.css" />
+    <Content Include="Content\css\skins\skin-red-light.css" />
+    <Content Include="Content\css\skins\skin-red-light.min.css" />
+    <Content Include="Content\css\skins\skin-red.css" />
+    <Content Include="Content\css\skins\skin-red.min.css" />
+    <Content Include="Content\css\skins\skin-yellow-light.css" />
+    <Content Include="Content\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Content\css\skins\skin-yellow.css" />
+    <Content Include="Content\css\skins\skin-yellow.min.css" />
+    <Content Include="Content\css\skins\_all-skins.css" />
+    <Content Include="Content\css\skins\_all-skins.min.css" />
+    <Content Include="Content\ima\ninos.PNG" />
+    <Content Include="Content\img\AdminLTELogo.png" />
+    <Content Include="Content\img\avatar.png" />
+    <Content Include="Content\img\avatar04.png" />
+    <Content Include="Content\img\avatar2.png" />
+    <Content Include="Content\img\avatar3.png" />
+    <Content Include="Content\img\avatar5.png" />
+    <Content Include="Content\img\boxed-bg.jpg" />
+    <Content Include="Content\img\boxed-bg.png" />
+    <Content Include="Content\img\credit\american-express.png" />
+    <Content Include="Content\img\credit\cirrus.png" />
+    <Content Include="Content\img\credit\mastercard.png" />
+    <Content Include="Content\img\credit\mestro.png" />
+    <Content Include="Content\img\credit\paypal.png" />
+    <Content Include="Content\img\credit\paypal2.png" />
+    <Content Include="Content\img\credit\visa.png" />
+    <Content Include="Content\img\default-150x150.png" />
+    <Content Include="Content\img\icons.png" />
+    <Content Include="Content\img\photo1.png" />
+    <Content Include="Content\img\photo2.png" />
+    <Content Include="Content\img\photo3.jpg" />
+    <Content Include="Content\img\photo4.jpg" />
+    <Content Include="Content\img\user1-128x128.jpg" />
+    <Content Include="Content\img\user2-160x160.jpg" />
+    <Content Include="Content\img\user3-128x128.jpg" />
+    <Content Include="Content\img\user4-128x128.jpg" />
+    <Content Include="Content\img\user5-128x128.jpg" />
+    <Content Include="Content\img\user6-128x128.jpg" />
+    <Content Include="Content\img\user7-128x128.jpg" />
+    <Content Include="Content\img\user8-128x128.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\css\adminlte.css.map" />
+    <Content Include="Scripts\dist\css\adminlte.css.map" />
+    <Content Include="Scripts\dist\js\adminlte.js.map" />
+    <Content Include="Scripts\dist\js\adminlte.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\chart.js2" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\device-pixel-ratio.md" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\FontAwesome.otf" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\search_plus_index.json" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\dist\js\plugins\jquery\jquery.min.map" />
+    <Content Include="Scripts\dist\js\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper-utils.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper-utils.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper-utils.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper-utils.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper.js.map" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper.min.js.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dist\css\adminlte.css" />
+    <Content Include="Scripts\dist\css\adminlte.min.css" />
+    <Content Include="Scripts\dist\img\AdminLTELogo.png" />
+    <Content Include="Scripts\dist\img\avatar.png" />
+    <Content Include="Scripts\dist\img\avatar04.png" />
+    <Content Include="Scripts\dist\img\avatar2.png" />
+    <Content Include="Scripts\dist\img\avatar3.png" />
+    <Content Include="Scripts\dist\img\avatar5.png" />
+    <Content Include="Scripts\dist\img\boxed-bg.jpg" />
+    <Content Include="Scripts\dist\img\boxed-bg.png" />
+    <Content Include="Scripts\dist\img\credit\american-express.png" />
+    <Content Include="Scripts\dist\img\credit\cirrus.png" />
+    <Content Include="Scripts\dist\img\credit\mastercard.png" />
+    <Content Include="Scripts\dist\img\credit\mestro.png" />
+    <Content Include="Scripts\dist\img\credit\paypal.png" />
+    <Content Include="Scripts\dist\img\credit\paypal2.png" />
+    <Content Include="Scripts\dist\img\credit\visa.png" />
+    <Content Include="Scripts\dist\img\default-150x150.png" />
+    <Content Include="Scripts\dist\img\icons.png" />
+    <Content Include="Scripts\dist\img\photo1.png" />
+    <Content Include="Scripts\dist\img\photo2.png" />
+    <Content Include="Scripts\dist\img\photo3.jpg" />
+    <Content Include="Scripts\dist\img\photo4.jpg" />
+    <Content Include="Scripts\dist\img\user1-128x128.jpg" />
+    <Content Include="Scripts\dist\img\user2-160x160.jpg" />
+    <Content Include="Scripts\dist\img\user3-128x128.jpg" />
+    <Content Include="Scripts\dist\img\user4-128x128.jpg" />
+    <Content Include="Scripts\dist\img\user5-128x128.jpg" />
+    <Content Include="Scripts\dist\img\user6-128x128.jpg" />
+    <Content Include="Scripts\dist\img\user7-128x128.jpg" />
+    <Content Include="Scripts\dist\img\user8-128x128.jpg" />
+    <Content Include="Scripts\dist\js\adminlte.js" />
+    <Content Include="Scripts\dist\js\adminlte.min.js" />
+    <Content Include="Scripts\dist\js\demo.js" />
+    <Content Include="Scripts\dist\js\pages\dashboard.js" />
+    <Content Include="Scripts\dist\js\pages\dashboard2.js" />
+    <Content Include="Scripts\dist\js\pages\dashboard3.js" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\dist\js\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chart.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\Chart.bundle.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\Chart.bundle.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\Chart.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\Chart.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\cartesian\category.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\cartesian\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\cartesian\linear.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\cartesian\logarithmic.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\cartesian\time.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\labelling.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\radial\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\radial\linear.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\axes\styling.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\area.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\bar.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\bubble.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\doughnut.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\line.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\mixed.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\polar.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\radar.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\charts\scatter.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\animations.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\elements.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\layout.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\legend.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\title.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\configuration\tooltip.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\api.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\axes.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\charts.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\contributing.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\plugins.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\developers\updates.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\colors.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\fonts.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\interactions\events.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\interactions\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\interactions\modes.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\options.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\general\responsive.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\getting-started\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\getting-started\installation.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\getting-started\integration.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\getting-started\usage.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-anchorjs\anchor-style.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.bundle.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.bundle.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\chartjs-plugin-deferred.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\chartjs-plugin-deferred.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\style.css" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-fontsettings\fontsettings.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-fontsettings\website.css" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-ga\plugin.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-highlight\ebook.css" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-highlight\website.css" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-search-plus\jquery.mark.min.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-search-plus\search.css" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-search-plus\search.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-sharing\buttons.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\gitbook.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\images\apple-touch-icon-precomposed-152.png" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\images\favicon.ico" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\style.css" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\gitbook\theme.js" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\notes\comparison.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\notes\extensions.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\notes\index.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\notes\license.html" />
+    <Content Include="Scripts\dist\js\plugins\chartjs2\docs\style.css" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Scripts\dist\js\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\dist\js\plugins\jquery\core.js" />
+    <Content Include="Scripts\dist\js\plugins\jquery\jquery.js" />
+    <Content Include="Scripts\dist\js\plugins\jquery\jquery.min.js" />
+    <Content Include="Scripts\dist\js\plugins\jquery\jquery.slim.js" />
+    <Content Include="Scripts\dist\js\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper-utils.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper-utils.min.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\esm\popper.min.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper-utils.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper-utils.min.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\popper.min.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper-utils.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper-utils.min.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper.js" />
+    <Content Include="Scripts\dist\js\plugins\popper\umd\popper.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\adminlte.js" />
+    <Content Include="Scripts\js\adminlte.min.js" />
+    <Content Include="Scripts\js\app.js" />
+    <Content Include="Scripts\js\app.min.js" />
+    <Content Include="Scripts\js\demo.js" />
+    <Content Include="Scripts\js\pages\dashboard.js" />
+    <Content Include="Scripts\js\pages\dashboard2.js" />
+    <Content Include="Scripts\js\pages\dashboard3.js" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\plugins\chart.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\Chart.bundle.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\Chart.bundle.min.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\Chart.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\Chart.min.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\cartesian\category.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\cartesian\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\cartesian\linear.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\cartesian\logarithmic.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\cartesian\time.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\labelling.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\radial\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\radial\linear.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\axes\styling.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\area.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\bar.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\bubble.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\doughnut.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\line.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\mixed.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\polar.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\radar.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\charts\scatter.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\animations.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\elements.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\layout.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\legend.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\title.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\configuration\tooltip.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\api.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\axes.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\charts.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\contributing.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\plugins.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\developers\updates.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\colors.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\fonts.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\interactions\events.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\interactions\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\interactions\modes.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\options.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\responsive.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\getting-started\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\getting-started\installation.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\getting-started\integration.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\getting-started\usage.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-anchorjs\anchor-style.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.bundle.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.bundle.min.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\Chart.min.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\chartjs-plugin-deferred.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\chartjs-plugin-deferred.min.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-chartjs\style.css" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-fontsettings\fontsettings.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-fontsettings\website.css" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-ga\plugin.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-highlight\ebook.css" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-highlight\website.css" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-search-plus\jquery.mark.min.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-search-plus\search.css" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-search-plus\search.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook-plugin-sharing\buttons.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\gitbook.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\images\apple-touch-icon-precomposed-152.png" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\images\favicon.ico" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\style.css" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\theme.js" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\notes\comparison.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\notes\extensions.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\notes\index.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\notes\license.html" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\style.css" />
+    <Content Include="Scripts\js\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Scripts\js\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Scripts\js\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\js\plugins\jquery\core.js" />
+    <Content Include="Scripts\js\plugins\jquery\jquery.js" />
+    <Content Include="Scripts\js\plugins\jquery\jquery.min.js" />
+    <Content Include="Scripts\js\plugins\jquery\jquery.slim.js" />
+    <Content Include="Scripts\js\plugins\jquery\jquery.slim.min.js" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper-utils.js" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper-utils.min.js" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper.js" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper.min.js" />
+    <Content Include="Scripts\js\plugins\popper\popper-utils.js" />
+    <Content Include="Scripts\js\plugins\popper\popper-utils.min.js" />
+    <Content Include="Scripts\js\plugins\popper\popper.js" />
+    <Content Include="Scripts\js\plugins\popper\popper.min.js" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper-utils.js" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper-utils.min.js" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper.js" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\plugins\chart.js\Chart.bundle.js" />
+    <Content Include="Scripts\plugins\chart.js\Chart.bundle.min.js" />
+    <Content Include="Scripts\plugins\chart.js\Chart.js" />
+    <Content Include="Scripts\plugins\chart.js\Chart.min.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\cartesian\category.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\cartesian\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\cartesian\linear.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\cartesian\logarithmic.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\cartesian\time.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\labelling.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\radial\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\radial\linear.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\axes\styling.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\area.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\bar.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\bubble.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\doughnut.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\line.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\mixed.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\polar.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\radar.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\charts\scatter.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\animations.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\elements.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\layout.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\legend.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\title.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\configuration\tooltip.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\api.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\axes.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\charts.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\contributing.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\plugins.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\developers\updates.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\colors.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\device-pixel-ratio.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\fonts.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\interactions\events.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\interactions\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\interactions\modes.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\options.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\responsive.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\getting-started\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\getting-started\installation.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\getting-started\integration.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\getting-started\usage.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-anchorjs\anchor-style.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\Chart.bundle.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\Chart.bundle.min.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\Chart.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\Chart.min.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\chartjs-plugin-deferred.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\chartjs-plugin-deferred.min.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-chartjs\style.css" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-fontsettings\fontsettings.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-fontsettings\website.css" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-ga\plugin.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-highlight\ebook.css" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-highlight\website.css" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-search-plus\jquery.mark.min.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-search-plus\search.css" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-search-plus\search.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook-plugin-sharing\buttons.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\gitbook.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\images\apple-touch-icon-precomposed-152.png" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\images\favicon.ico" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\style.css" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\theme.js" />
+    <Content Include="Scripts\plugins\chart.js\docs\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\notes\comparison.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\notes\extensions.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\notes\index.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\notes\license.html" />
+    <Content Include="Scripts\plugins\chart.js\docs\style.css" />
+    <Content Include="Scripts\plugins\chartjs-old\Chart.js" />
+    <Content Include="Scripts\plugins\chartjs-old\Chart.min.js" />
+    <Content Include="Scripts\plugins\chartjs\Chart.js" />
+    <Content Include="Scripts\plugins\chartjs\Chart.min.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\License.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\License.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\License.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\License.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Scripts\plugins\datatables\images\sort_asc.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_both.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_desc.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Scripts\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Scripts\plugins\datepicker\datepicker3.css" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.az.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Scripts\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="Scripts\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Scripts\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\plugins\popper\esm\popper-utils.js" />
+    <Content Include="Scripts\plugins\popper\esm\popper-utils.min.js" />
+    <Content Include="Scripts\plugins\popper\esm\popper.js" />
+    <Content Include="Scripts\plugins\popper\esm\popper.min.js" />
+    <Content Include="Scripts\plugins\popper\popper-utils.js" />
+    <Content Include="Scripts\plugins\popper\popper-utils.min.js" />
+    <Content Include="Scripts\plugins\popper\popper.js" />
+    <Content Include="Scripts\plugins\popper\popper.min.js" />
+    <Content Include="Scripts\plugins\popper\umd\popper-utils.js" />
+    <Content Include="Scripts\plugins\popper\umd\popper-utils.min.js" />
+    <Content Include="Scripts\plugins\popper\umd\popper.js" />
+    <Content Include="Scripts\plugins\popper\umd\popper.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Gradoes\Create.cshtml" />
+    <Content Include="Views\Gradoes\Delete.cshtml" />
+    <Content Include="Views\Gradoes\Details.cshtml" />
+    <Content Include="Views\Gradoes\Edit.cshtml" />
+    <Content Include="Views\Gradoes\Index.cshtml" />
+    <Content Include="Views\Escuelas\Create.cshtml" />
+    <Content Include="Views\Escuelas\Delete.cshtml" />
+    <Content Include="Views\Escuelas\Details.cshtml" />
+    <Content Include="Views\Escuelas\Edit.cshtml" />
+    <Content Include="Views\Escuelas\Index.cshtml" />
+    <Content Include="Views\Planillas\Create.cshtml" />
+    <Content Include="Views\Planillas\Delete.cshtml" />
+    <Content Include="Views\Planillas\Details.cshtml" />
+    <Content Include="Views\Planillas\Edit.cshtml" />
+    <Content Include="Views\Planillas\Index.cshtml" />
+    <Content Include="Views\CargoPlanillas\Create.cshtml" />
+    <Content Include="Views\CargoPlanillas\Delete.cshtml" />
+    <Content Include="Views\CargoPlanillas\Details.cshtml" />
+    <Content Include="Views\CargoPlanillas\Edit.cshtml" />
+    <Content Include="Views\CargoPlanillas\Index.cshtml" />
+    <Content Include="Views\DetallePlanillas\Create.cshtml" />
+    <Content Include="Views\DetallePlanillas\Delete.cshtml" />
+    <Content Include="Views\DetallePlanillas\Details.cshtml" />
+    <Content Include="Views\DetallePlanillas\Edit.cshtml" />
+    <Content Include="Views\DetallePlanillas\Index.cshtml" />
+    <Content Include="Views\Sufragios\Create.cshtml" />
+    <Content Include="Views\Sufragios\Delete.cshtml" />
+    <Content Include="Views\Sufragios\Details.cshtml" />
+    <Content Include="Views\Sufragios\Edit.cshtml" />
+    <Content Include="Views\Sufragios\Index.cshtml" />
+    <Content Include="Views\Resultadoes\Index.cshtml" />
+    <Content Include="Views\Alumnoes\Create.cshtml" />
+    <Content Include="Views\Alumnoes\Delete.cshtml" />
+    <Content Include="Views\Alumnoes\Details.cshtml" />
+    <Content Include="Views\Alumnoes\Edit.cshtml" />
+    <Content Include="Views\Alumnoes\Index.cshtml" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColReorder\Readme.md" />
+    <Content Include="Scripts\plugins\datatables\extensions\ColVis\Readme.md" />
+    <Content Include="Scripts\plugins\datatables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Scripts\plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="Scripts\plugins\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Scripts\plugins\datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Scripts\js\adminlte.js.map" />
+    <Content Include="Scripts\js\adminlte.min.js.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Scripts\js\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\js\plugins\chart.js2" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\general\device-pixel-ratio.md" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\gitbook\fonts\fontawesome\FontAwesome.otf" />
+    <Content Include="Scripts\js\plugins\chartjs2\docs\search_plus_index.json" />
+    <Content Include="Scripts\js\plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Scripts\js\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\js\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\js\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\js\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\js\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\js\plugins\jquery\jquery.min.map" />
+    <Content Include="Scripts\js\plugins\jquery\jquery.slim.min.map" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper-utils.js.map" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper.js.map" />
+    <Content Include="Scripts\js\plugins\popper\esm\popper.min.js.map" />
+    <Content Include="Scripts\js\plugins\popper\popper-utils.js.map" />
+    <Content Include="Scripts\js\plugins\popper\popper-utils.min.js.map" />
+    <Content Include="Scripts\js\plugins\popper\popper.js.map" />
+    <Content Include="Scripts\js\plugins\popper\popper.min.js.map" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper-utils.js.map" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper.js.map" />
+    <Content Include="Scripts\js\plugins\popper\umd\popper.min.js.map" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Scripts\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Scripts\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\plugins\chart.js\docs\general\device-pixel-ratio.md" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\fonts\fontawesome\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\plugins\chart.js\docs\gitbook\fonts\fontawesome\FontAwesome.otf" />
+    <Content Include="Scripts\plugins\chart.js\docs\search_plus_index.json" />
+    <Content Include="Scripts\plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Scripts\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\plugins\popper\esm\popper-utils.js.map" />
+    <Content Include="Scripts\plugins\popper\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\plugins\popper\esm\popper.js.map" />
+    <Content Include="Scripts\plugins\popper\esm\popper.min.js.map" />
+    <Content Include="Scripts\plugins\popper\popper-utils.js.map" />
+    <Content Include="Scripts\plugins\popper\popper-utils.min.js.map" />
+    <Content Include="Scripts\plugins\popper\popper.js.map" />
+    <Content Include="Scripts\plugins\popper\popper.min.js.map" />
+    <Content Include="Scripts\plugins\popper\umd\popper-utils.js.map" />
+    <Content Include="Scripts\plugins\popper\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\plugins\popper\umd\popper.js.map" />
+    <Content Include="Scripts\plugins\popper\umd\popper.min.js.map" />
+    <Content Include="Views\Sufragios\votar.cshtml" />
+    <Content Include="Views\Sufragios\Realizarvoto.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Imagenes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1272</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1272/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
